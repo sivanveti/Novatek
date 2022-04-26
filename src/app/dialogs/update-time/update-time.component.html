@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Update Time</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+        <mat-label>Minuites</mat-label>
+        <input type="number" matInput [(ngModel)]="minuites" placeholder="Enter Minuites" >
+        <button mat-icon-button matSuffix color="primary" (click)="minuites = minuites - 1" >-</button>
+        <button mat-icon-button matSuffix color="primary" (click)="minuites = minuites + 1" >+</button>
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Hours</mat-label>
+        <input type="number" matInput [(ngModel)]="hours" placeholder="Enter Hours" >
+        <button mat-icon-button matSuffix color="primary" (click)="hours = hours - 1">-</button>
+        <button mat-icon-button matSuffix color="primary" (click)="hours = hours + 1">+</button>
+    </mat-form-field>
+<!-- Minuites: <input type="number" matInput [(ngModel)]="minuites" /> <button (click)="minuites = minuites + 1" >increment</button>
+Hours: <input type="number" matInput [(ngModel)]="hours" /> <button (click)="hours = hours + 1">increment</button> -->
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button  mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial (click)="save()">Save</button>
+  </mat-dialog-actions>
